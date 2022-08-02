@@ -14,7 +14,6 @@ namespace ConsoleApp1
         public async void Start()
         {
 
-            //var certificate = new X509Certificate2("iiotsignalrservercert.pfx","Nagarro@123");
 
             _connection = new HubConnectionBuilder()
                  .WithUrl("your_signalr_server_url", options =>
