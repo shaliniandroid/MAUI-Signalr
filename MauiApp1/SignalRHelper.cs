@@ -17,10 +17,9 @@ namespace ConsoleApp1
             //var certificate = new X509Certificate2("iiotsignalrservercert.pfx","Nagarro@123");
 
             _connection = new HubConnectionBuilder()
-                 .WithUrl("https://iiotsignalrserver.centralindia.azurecontainer.io/notifications", options =>
+                 .WithUrl("your_signalr_server_url", options =>
                  {
-                     options.Headers[CommonConstants.NotificationHubUserNamePropName] = "DataCollectionService";
-                     options.Headers[CommonConstants.NotificationHubPasswordPropName] = "Passw0rd@123";
+                    
                      options.HttpMessageHandlerFactory = (message) =>
                      {
                          if (message is HttpClientHandler clientHandler)
